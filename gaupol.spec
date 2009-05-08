@@ -9,7 +9,7 @@ Source0:        http://download.gna.org/gaupol/0.14/%{name}-%{version}.tar.bz2
 Source1:        http://download.gna.org/gaupol/0.14/%{name}-%{version}.tar.bz2.sig
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
-%{py_requires}
+%{py_requires -d}
 Requires:	pygtk2.0
 Requires:	pygtk2.0-libglade
 Suggests:	python-enchant
