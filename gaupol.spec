@@ -38,7 +38,9 @@ multiple documents and convenience of translating.
 
 %install
 %{__rm} -rf %{buildroot}
-%{__python} setup.py install --root=%{buildroot}
+# Temporarily enable byte-compiling in spec
+# as it isn't enabled system wide by default, yet
+PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
 %find_lang %{name}
 
 %clean
