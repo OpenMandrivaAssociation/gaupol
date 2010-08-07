@@ -1,12 +1,12 @@
 Name:           gaupol
-Version:        0.16.2
+Version:        0.17
 Release:        %mkrel 1
 Summary:        Subtitle editor
 License:        GPLv3+
 Group:          Video
 URL:            http://home.gna.org/gaupol/
-Source0:        http://download.gna.org/gaupol/0.16/%{name}-%{version}.tar.bz2
-Source1:        http://download.gna.org/gaupol/0.16/%{name}-%{version}.tar.bz2.sig
+Source0:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2
+Source1:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2.sig
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 %{py_requires -d}
@@ -15,17 +15,11 @@ Requires:	python-aeidon
 Suggests:	python-enchant >= 1.4.0
 Suggests:	python-chardet
 Suggests:	mplayer
-%if %mdkversion < 200900
-Requires(post): desktop-common-data
-Requires(postun): desktop-common-data
-Requires(post): desktop-file-utils
-Requires(postun): desktop-file-utils
-%endif
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %package -n python-aeidon
-Summary:	Reading, writing and manipulating text-based subtitle files
+Summary:	Python package for Reading, writing and manipulating text-based subtitle files
 Group:		Development/Python
 Url:		http://users.tkk.fi/~otsaloma/gaupol/doc/api/aeidon.html
 Provides:	aeidon = %{version}-%{release}
@@ -57,16 +51,6 @@ PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
 
 %clean
 %{__rm} -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%{update_desktop_database}
-%{update_menus}
-
-%postun
-%{clean_desktop_database}
-%{clean_menus}
-%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
