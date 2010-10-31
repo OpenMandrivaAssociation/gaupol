@@ -1,6 +1,6 @@
 Name:           gaupol
 Version:        0.17
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Subtitle editor
 License:        GPLv3+
 Group:          Video
