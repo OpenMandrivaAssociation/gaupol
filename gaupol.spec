@@ -1,6 +1,6 @@
 Name:           gaupol
-Version:        0.17
-Release:        %mkrel 2
+Version:        0.17.1
+Release:        %mkrel 1
 Summary:        Subtitle editor
 License:        GPLv3+
 Group:          Video
@@ -9,7 +9,7 @@ Source0:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2
 Source1:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2.sig
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
-%{py_requires -d}
+BuildRequires:	python-devel
 Requires:	pygtk2.0 >= 2.16
 Requires:	python-aeidon
 Suggests:	python-enchant >= 1.4.0
@@ -44,8 +44,9 @@ i.e. positions (times or frames) and texts.
 
 %install
 %{__rm} -rf %{buildroot}
-# Temporarily enable byte-compiling
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
+%{__python} setup.py install \
+	--root=%{buildroot} \
+	--no-compile
 
 %find_lang %{name}
 
