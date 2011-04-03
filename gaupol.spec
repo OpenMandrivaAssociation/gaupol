@@ -1,12 +1,13 @@
 Name:           gaupol
 Version:        0.17.1
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Subtitle editor
 License:        GPLv3+
 Group:          Video
 URL:            http://home.gna.org/gaupol/
 Source0:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2
 Source1:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2.sig
+Patch0:		gaupol-0.17.1-broken_inheritance.patch
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 BuildRequires:	python-devel
@@ -38,6 +39,7 @@ i.e. positions (times or frames) and texts.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__python} setup.py build
