@@ -7,7 +7,6 @@ Group:          Video
 URL:            http://home.gna.org/gaupol/
 Source0:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2
 Source1:        http://download.gna.org/gaupol/0.17/%{name}-%{version}.tar.bz2.sig
-Patch0:		gaupol-0.17.1-broken_inheritance.patch
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 BuildRequires:	python-devel
@@ -17,7 +16,6 @@ Suggests:	python-enchant >= 1.4.0
 Suggests:	python-chardet
 Suggests:	mplayer
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %package -n python-aeidon
 Summary:	Python package for Reading, writing and manipulating text-based subtitle files
@@ -39,7 +37,6 @@ i.e. positions (times or frames) and texts.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__python} setup.py build
