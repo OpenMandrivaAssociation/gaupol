@@ -1,20 +1,20 @@
-Name:           gaupol
-Version:        0.19.1
-Release:        %mkrel 1
-Summary:        Subtitle editor
-License:        GPLv3+
-Group:          Video
-URL:            http://home.gna.org/gaupol/
-Source0:        http://download.gna.org/gaupol/0.18/%{name}-%{version}.tar.gz
-BuildRequires:  desktop-file-utils
-BuildRequires:  intltool
+Name:		gaupol
+Version:	0.19.2
+Release:	%mkrel 1
+Summary:	Subtitle editor
+License:	GPLv3+
+Group:		Video
+URL:		http://home.gna.org/gaupol/
+Source0:	http://download.gna.org/gaupol/0.19/%{name}-%{version}.tar.gz
+BuildRequires:	desktop-file-utils
+BuildRequires:	intltool
 BuildRequires:	python-devel
 Requires:	pygtk2.0 >= 2.16
 Requires:	python-aeidon
 Suggests:	python-enchant >= 1.4.0
 Suggests:	python-chardet
 Suggests:	mplayer
-BuildArch:      noarch
+BuildArch:	noarch
 
 %package -n python-aeidon
 Summary:	Python package for Reading, writing and manipulating text-based subtitle files
