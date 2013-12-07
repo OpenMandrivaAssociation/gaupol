@@ -1,7 +1,7 @@
 Summary:        Subtitle editor
 Name:           gaupol
 Version:        0.19.2
-Release:        5
+Release:        6
 License:        GPLv3+
 Group:          Video
 Url:            http://home.gna.org/gaupol/
