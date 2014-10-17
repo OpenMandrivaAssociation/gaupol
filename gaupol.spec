@@ -1,7 +1,7 @@
 Summary:        Subtitle editor
 Name:           gaupol
 Version:        0.19.2
-Release:        8
+Release:        9
 License:        GPLv3+
 Group:          Video
 Url:            http://home.gna.org/gaupol/
@@ -10,7 +10,7 @@ BuildArch:      noarch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 Requires:	pygtk2.0 >= 2.16
 Requires:	python-aeidon
 Suggests:	python-enchant >= 1.4.0
@@ -39,10 +39,10 @@ i.e. positions (times or frames) and texts.
 %setup -q
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
-python setup.py install \
+python2 setup.py install \
 	--root=%{buildroot} \
 	--no-compile
 
