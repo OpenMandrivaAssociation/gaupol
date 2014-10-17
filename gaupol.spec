@@ -51,7 +51,7 @@ python2 setup.py install \
 %files -f %{name}.lang
 %doc AUTHORS NEWS README TODO
 %{_bindir}/gaupol
-%{python_sitelib}/gaupol*
+%{python2_sitelib}/gaupol*
 %{_datadir}/applications/gaupol.desktop
 %{_mandir}/man1/gaupol.1*
 %{_datadir}/gaupol
@@ -59,5 +59,5 @@ python2 setup.py install \
 
 %files -n python-aeidon
 %doc README.aeidon
-%{python_sitelib}/aeidon/
+%{python2_sitelib}/aeidon/
 
