@@ -71,7 +71,7 @@ Internationalization and locale data for %{name} and python-aeidon.
 %files i18n -f %{name}.lang
 
 %files
-%doc AUTHORS.md NEWS.md README.md TODO.md
+%doc AUTHORS.md NEWS.md README.md
 %{_bindir}/gaupol
 %{python_sitelib}/gaupol*
 %{_datadir}/applications/io.otsaloma.gaupol.desktop
