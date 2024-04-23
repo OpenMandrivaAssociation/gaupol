@@ -1,6 +1,6 @@
 Summary:        Subtitle editor
 Name:           gaupol
-Version:	1.13
+Version:	1.14.1
 Release:	1
 License:        GPLv3+
 Group:          Video
