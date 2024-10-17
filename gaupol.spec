@@ -32,7 +32,7 @@ multiple documents and convenience of translating.
 %package -n python-aeidon
 Summary:	Python package for Reading, writing and manipulating text-based subtitle files
 Group:		Development/Python
-Url:		http://users.tkk.fi/~otsaloma/gaupol/doc/api/aeidon.html
+Url:		https://users.tkk.fi/~otsaloma/gaupol/doc/api/aeidon.html
 Requires:	%{name}-i18n = %{version}-%{release}
 Requires:	iso-codes
 Recommends:	python-chardet
