@@ -1,7 +1,7 @@
 Summary:        Subtitle editor
 Name:           gaupol
 Version:	1.15
-Release:	2
+Release:	3
 License:        GPLv3+
 Group:          Video
 URL:            https://otsaloma.io/gaupol/
