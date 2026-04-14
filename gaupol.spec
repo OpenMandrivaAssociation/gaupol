@@ -11,6 +11,7 @@ BuildArch:      noarch
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(distutils)
 
 Requires:	%{name}-i18n = %{version}-%{release}
 Requires:	python3dist(pygobject)
